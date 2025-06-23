@@ -15,7 +15,7 @@ export const TestEmail = ({
 }) => (
    <MailLayout preview="Test Email">
       <MailTitle>Hello {user.name}</MailTitle>
-      <MailText>This is a test email from ${application.name}.</MailText>
+      <MailText>This is a test email from {application.name}.</MailText>
    </MailLayout>
 );
 
