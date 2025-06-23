@@ -1,0 +1,3 @@
+{
+   "extends": "@cloud0/typescript-config/base.json"
+}

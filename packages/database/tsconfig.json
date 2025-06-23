@@ -1,0 +1,16 @@
+{
+   "extends": "@cloud0/typescript-config/base",
+   "compilerOptions": {
+      "composite": false,
+      "forceConsistentCasingInFileNames": true,
+      "inlineSources": false,
+      "isolatedModules": true,
+      "module": "ESNext",
+      "moduleResolution": "Bundler",
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "preserveWatchOutput": true
+   },
+   "include": ["src/**/*.ts", "src/**/*.tsx"],
+   "exclude": ["dist", "build", "node_modules"]
+}

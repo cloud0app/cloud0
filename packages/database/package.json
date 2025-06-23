@@ -1,0 +1,28 @@
+{
+   "name": "@cloud0/database",
+   "version": "1.0.0",
+   "exports": {
+      ".": "./src/index.ts"
+   },
+   "scripts": {
+      "push": "prisma db push",
+      "generate": "prisma generate",
+      "migrate": "prisma migrate dev",
+      "studio": "prisma studio --browser none",
+      "format": "prisma format",
+      "prebuild": "prisma generate",
+      "predev": "prisma generate"
+   },
+   "dependencies": {
+      "@prisma/client": "^6.8.2",
+      "superjson": "^2.2.2"
+   },
+   "devDependencies": {
+      "@types/node": "^20",
+      "prisma": "^6.8.2",
+      "typescript": "^5.8.3"
+   },
+   "prisma": {
+      "schema": "./prisma"
+   }
+}

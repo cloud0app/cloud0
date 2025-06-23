@@ -1,0 +1,1 @@
+export { default } from "@cloud0/ui/postcss.config";

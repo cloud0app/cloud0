@@ -1,0 +1,9 @@
+{
+   "extends": "@cloud0/typescript-config/base",
+   "compilerOptions": {
+      "strict": false,
+      "moduleResolution": "nodenext"
+   },
+   "include": ["src/**/*.ts", "src/**/*.tsx"],
+   "exclude": ["dist", "build", "node_modules"]
+}

@@ -1,0 +1,22 @@
+{
+   "private": true,
+   "name": "cloud0-monorepo",
+   "scripts": {
+      "build": "turbo build",
+      "dev": "turbo dev",
+      "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\""
+   },
+   "workspaces": [
+      "packages/*",
+      "apps/*"
+   ],
+   "devDependencies": {
+      "prettier": "^3.5.1",
+      "prettier-package-json": "^2.8.0",
+      "prettier-plugin-organize-imports": "^4.1.0",
+      "prettier-plugin-tailwindcss": "^0.6.13",
+      "turbo": "^2.4.2",
+      "typescript": "^5.8.3"
+   },
+   "packageManager": "^bun@1.2.14"
+}

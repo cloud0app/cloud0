@@ -1,0 +1,11 @@
+{
+   "extends": "@cloud0/typescript-config/react-library.json",
+   "compilerOptions": {
+      "baseUrl": "src/",
+      "paths": {
+         "@cloud0/ui": ["./components/index.ts"]
+      }
+   },
+   "include": ["src/**/*.ts", "src/**/*.tsx"],
+   "exclude": ["dist", "build", "node_modules"]
+}

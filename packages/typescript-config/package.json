@@ -1,0 +1,9 @@
+{
+   "private": true,
+   "name": "@cloud0/typescript-config",
+   "version": "0.0.0",
+   "license": "PROPRIETARY",
+   "publishConfig": {
+      "access": "public"
+   }
+}

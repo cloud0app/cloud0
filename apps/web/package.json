@@ -1,0 +1,51 @@
+{
+   "name": "@cloud0/web",
+   "version": "0.0.1",
+   "private": true,
+   "type": "module",
+   "scripts": {
+      "build": "next build",
+      "dev": "next dev --turbo",
+      "start": "next start",
+      "lint": "next lint",
+      "lint:fix": "next lint --fix",
+      "typecheck": "tsc --noEmit",
+      "db:generate": "dotenv-flow -e .env -- bun --filter=@cloud0/database generate",
+      "db:push": "dotenv-flow -e .env -- bun --filter=@cloud0/database push",
+      "db:studio": "dotenv-flow -e .env -- bun --filter=@cloud0/database studio",
+      "db:format": "dotenv-flow -e .env -- bun --filter=@cloud0/database format"
+   },
+   "dependencies": {
+      "@cloud0/ui": "*",
+      "@hookform/resolvers": "^5.0.1",
+      "@prisma/nextjs-monorepo-workaround-plugin": "^6.9.0",
+      "@tabler/icons-react": "^3.33.0",
+      "@trpc/client": "^11.0.0",
+      "@trpc/react-query": "^11.0.0",
+      "axios": "^1.9.0",
+      "better-auth": "^1.2.8",
+      "dotenv-flow-cli": "^1.1.1",
+      "lucide-react": "^0.475.0",
+      "next": "^15.2.3",
+      "next-themes": "^0.4.4",
+      "nuqs": "^2.4.3",
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "react-hook-form": "^7.56.4",
+      "sonner": "^2.0.3",
+      "ssr-only-secrets": "^0.1.2",
+      "zod": "^3.25.51",
+      "zustand": "^5.0.4"
+   },
+   "devDependencies": {
+      "@types/node": "^20",
+      "@types/react": "^19.1.0",
+      "@types/react-dom": "^19.1.0",
+      "@cloud0/typescript-config": "*",
+      "@cloud0/api": "*",
+      "@cloud0/utils": "*",
+      "@tailwindcss/postcss": "^4",
+      "@tailwindcss/typography": "^0.5.16",
+      "typescript": "^5.8.3"
+   }
+}
