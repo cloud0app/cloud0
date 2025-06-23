@@ -8,6 +8,9 @@ export default function Page() {
       onSuccess: () => {
          toast.success("Email sent successfully");
       },
+      onError: (error) => {
+         toast.error(`Error sending email: ${error.message}`);
+      }
    });
 
    return (

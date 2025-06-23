@@ -1,4 +1,5 @@
 import { MailService } from "@cloud0/email";
+import { application } from "@cloud0/utils";
 import { protectedProcedure, publicProcedure } from "../context";
 import { createTRPCRouter } from "../trpc";
 
@@ -8,12 +9,12 @@ export const authRouter = createTRPCRouter({
    }),
    testEmail: publicProcedure.mutation(async ({ ctx }) => {
       const mailService = new MailService();
-      await mailService.sendVerificationEmail({
+      await mailService.sendTestEmail({
          user: {
-            name: "Troy",
-            email: "troy@example.com",
+            name: application.contacts[0].name,
+            email: application.contacts[0].email,
          },
-         url: "https://example.com",
       });
+      return { success: true };
    }),
 });

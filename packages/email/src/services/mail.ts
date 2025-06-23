@@ -18,4 +18,15 @@ export class MailService {
          subject: `${application.name} - Forgot Password`,
       });
    }
+   async sendTestEmail(props: { user: { name: string; email: string } }) {
+      await sendEmail({
+         to: props.user.email,
+         html: `
+         <h1>Test Email</h1>
+         <p>Hello ${props.user.name},</p>
+         <p>This is a test email from ${application.name}.</p>
+         `,
+         subject: `${application.name} - Test`,
+      });
+   }
 }
