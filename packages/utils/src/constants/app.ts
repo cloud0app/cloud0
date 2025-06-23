@@ -15,6 +15,7 @@ export const application = {
    contacts: {
       0: {
          name: "IRANZI Thierry",
+         username: "iranzithierry",
          email: "iranzithierry12@gmail.com",
       },
       emailsReplyTo: "iranzithierry12@gmail.com",
