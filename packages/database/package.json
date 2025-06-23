@@ -15,6 +15,7 @@
    },
    "dependencies": {
       "@prisma/client": "^6.8.2",
+      "@prisma/extension-accelerate": "^2.0.1",
       "superjson": "^2.2.2"
    },
    "devDependencies": {

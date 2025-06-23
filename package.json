@@ -4,7 +4,8 @@
    "scripts": {
       "build": "turbo build",
       "dev": "turbo dev",
-      "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\""
+      "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
+      "postinstall": "turbo db:generate"
    },
    "workspaces": [
       "packages/*",
