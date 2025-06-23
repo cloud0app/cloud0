@@ -6,7 +6,7 @@ export function generateRandomString(length: number): string {
    let result = "";
 
    for (let i = 0; i < length; i++) {
-      const randomIndex = randomBytesArray[i] % charset.length;
+      const randomIndex = randomBytesArray[i]! % charset.length;
       result += charset[randomIndex];
    }
 
