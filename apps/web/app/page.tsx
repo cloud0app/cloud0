@@ -10,7 +10,7 @@ export default function Page() {
       },
       onError: (error) => {
          toast.error(`Error sending email: ${error.message}`);
-      }
+      },
    });
 
    return (
@@ -22,8 +22,9 @@ export default function Page() {
                onClick={() => {
                   testEmail.mutate();
                }}
+               processing={testEmail.isPending}
             >
-               Test Email
+               {testEmail.isPending ? "Sending Test Email..." : "Send Test Email"}
             </Button>
          </div>
       </div>

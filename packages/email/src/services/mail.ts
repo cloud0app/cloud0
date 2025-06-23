@@ -1,5 +1,5 @@
 import { sendEmail } from "@cloud0/email";
-import { EmailVerification, ForgotPassword } from "@cloud0/email/templates";
+import { EmailVerification, ForgotPassword, TestEmail } from "@cloud0/email/templates";
 import { application } from "@cloud0/utils";
 
 export class MailService {
@@ -21,11 +21,7 @@ export class MailService {
    async sendTestEmail(props: { user: { name: string; email: string } }) {
       await sendEmail({
          to: props.user.email,
-         html: `
-         <h1>Test Email</h1>
-         <p>Hello ${props.user.name},</p>
-         <p>This is a test email from ${application.name}.</p>
-         `,
+         react: TestEmail({ user: props.user}),
          subject: `${application.name} - Test`,
       });
    }
