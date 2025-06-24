@@ -22,3 +22,9 @@ export const sendEmailViaResend = async (opts: EmailOptions) => {
       }),
    });
 };
+export const addToAudience = async ({ email, audience }: { email: string; audience: string }) => {
+   const createdAudience = await resend?.audiences.create({
+      name: audience,
+   });
+   return createdAudience?.data;
+};

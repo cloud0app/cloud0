@@ -20,4 +20,18 @@ export const application = {
       },
       emailsReplyTo: "iranzithierry12@gmail.com",
    },
+   socials: [
+      {
+         name: "Github",
+         link: "https://github.com/cloud0app/cloud0",
+      },
+      {
+         name: "Discord",
+         link: "https://github.com/cloud0app/cloud0",
+      },
+      {
+         name: "X",
+         link: "https://github.com/cloud0app/cloud0",
+      },
+   ],
 };

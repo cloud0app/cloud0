@@ -1,6 +1,6 @@
 {
    "$schema": "https://turbo.build/schema.json",
-   "globalEnv": ["DATABASE_URL"],
+   "globalEnv": ["DATABASE_URL", "BETTER_AUTH_SECRET"],
    "globalDependencies": ["**/.env"],
    "ui": "tui",
    "tasks": {

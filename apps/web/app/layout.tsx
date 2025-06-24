@@ -1,15 +1,17 @@
 import { Providers } from "@/components/providers";
 import "@/styles/globals.css";
+import { Toaster } from "@cloud0/ui";
 import { application } from "@cloud0/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
-import { Toaster } from "sonner";
+// import { Toaster } from "sonner";
 import { cloakSSROnlySecret } from "ssr-only-secrets";
 
 const geistSans = Geist({
    variable: "--font-geist-sans",
    subsets: ["latin"],
+   weight: ["400", "500", "600", "700"],
 });
 const geistMono = Geist_Mono({
    variable: "--font-geist-mono",

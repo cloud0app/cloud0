@@ -10,6 +10,7 @@
       "lint": "next lint",
       "lint:fix": "next lint --fix",
       "typecheck": "tsc --noEmit",
+      "db:migrate": "dotenv-flow -e .env -- bun --filter=@cloud0/database migrate",
       "db:generate": "dotenv-flow -e .env -- bun --filter=@cloud0/database generate",
       "db:push": "dotenv-flow -e .env -- bun --filter=@cloud0/database push",
       "db:studio": "dotenv-flow -e .env -- bun --filter=@cloud0/database studio",
@@ -18,6 +19,7 @@
    "dependencies": {
       "@cloud0/ui": "*",
       "@hookform/resolvers": "^5.0.1",
+      "@number-flow/react": "^0.5.10",
       "@prisma/nextjs-monorepo-workaround-plugin": "^6.9.0",
       "@tabler/icons-react": "^3.33.0",
       "@trpc/client": "^11.0.0",

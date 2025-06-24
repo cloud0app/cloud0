@@ -19,5 +19,8 @@
       "turbo": "^2.4.2",
       "typescript": "^5.8.3"
    },
-   "packageManager": "^bun@1.2.14"
+   "packageManager": "^bun@1.2.14",
+   "dependencies": {
+      "@faker-js/faker": "^9.8.0"
+   }
 }

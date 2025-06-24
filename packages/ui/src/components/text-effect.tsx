@@ -10,20 +10,20 @@ import {
 import React from "react";
 import { cn } from "../lib/utils";
 
-export type PresetType = "blur" | "fade-in-blur" | "scale" | "fade" | "slide";
+export type TextEffectPresetType = "blur" | "fade-in-blur" | "scale" | "fade" | "slide";
 
-export type PerType = "word" | "char" | "line";
+export type TextEffectPerType = "word" | "char" | "line";
 
 export type TextEffectProps = {
    children: string;
-   per?: PerType;
+   per?: TextEffectPerType;
    as?: keyof React.JSX.IntrinsicElements;
    variants?: {
       container?: Variants;
       item?: Variants;
    };
    className?: string;
-   preset?: PresetType;
+   preset?: TextEffectPresetType;
    delay?: number;
    speedReveal?: number;
    speedSegment?: number;
@@ -36,7 +36,7 @@ export type TextEffectProps = {
    style?: React.CSSProperties;
 };
 
-const defaultStaggerTimes: Record<PerType, number> = {
+const defaultStaggerTimes: Record<TextEffectPerType, number> = {
    char: 0.03,
    word: 0.05,
    line: 0.1,
@@ -63,7 +63,7 @@ const defaultItemVariants: Variants = {
    exit: { opacity: 0 },
 };
 
-const presetVariants: Record<PresetType, { container: Variants; item: Variants }> = {
+const presetVariants: Record<TextEffectPresetType, { container: Variants; item: Variants }> = {
    blur: {
       container: defaultContainerVariants,
       item: {
@@ -175,6 +175,7 @@ const createVariantsWithTransition = (
       visible: {
          ...baseVariants.visible,
          transition: {
+            // @ts-ignore
             ...(hasTransition(baseVariants.visible) ? baseVariants.visible.transition : {}),
             ...mainTransition,
          },
@@ -182,6 +183,7 @@ const createVariantsWithTransition = (
       exit: {
          ...baseVariants.exit,
          transition: {
+            // @ts-ignore
             ...(hasTransition(baseVariants.exit) ? baseVariants.exit.transition : {}),
             ...mainTransition,
             staggerDirection: -1,
