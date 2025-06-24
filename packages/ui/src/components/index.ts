@@ -30,9 +30,9 @@ export * from "./sonner";
 export * from "./switch";
 export * from "./table";
 export * from "./tabs";
+export * from "./text-effect";
+export * from "./text-loop";
 export * from "./textarea";
 export * from "./toggle";
 export * from "./toggle-group";
 export * from "./tooltip";
-export * from "./text-loop"
-export * from "./text-effect"

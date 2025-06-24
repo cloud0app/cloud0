@@ -21,7 +21,7 @@ export class MailService {
    async sendTestEmail(props: { user: { name: string; email: string } }) {
       await sendEmail({
          to: props.user.email,
-         react: TestEmail({ user: props.user}),
+         react: TestEmail({ user: props.user }),
          subject: `${application.name} - Test`,
       });
    }

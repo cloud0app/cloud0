@@ -35,6 +35,6 @@ export const application = {
       },
    ],
    values: {
-      peasyWebsiteID: "01jygktwyb2g77n546vhb50z24"
-   }
+      peasyWebsiteID: "01jygktwyb2g77n546vhb50z24",
+   },
 };

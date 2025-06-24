@@ -42,7 +42,7 @@ export const WaitlistHeader = () => {
                   >
                      <Logo />
                   </Link>
-                  <div className="flex gap-3 text-muted-foreground">
+                  <div className="text-muted-foreground flex gap-3">
                      {links.map((link) => (
                         <Button asChild variant={"ghost"} size="icon" key={link.name}>
                            <Link key={link.name} href={link.href}>

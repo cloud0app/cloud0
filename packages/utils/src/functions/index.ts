@@ -2,6 +2,7 @@ export * from "./camel-case";
 export * from "./capitalize";
 export * from "./chunk";
 export * from "./cn";
+export * from "./confetti";
 export * from "./currency-formatter";
 export * from "./datetime";
 export * from "./fetcher";
@@ -12,4 +13,3 @@ export * from "./pluralize";
 export * from "./random-value";
 export * from "./truncate";
 export * from "./url";
-export * from "./confetti"

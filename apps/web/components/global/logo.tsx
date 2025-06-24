@@ -1,6 +1,6 @@
+import LogoMark from "@/assets/logo-mark.png";
 import { application, cn } from "@cloud0/utils";
 import Image from "next/image";
-import LogoMark from "@/assets/logo-mark.png";
 
 export const Logo = ({
    className,
@@ -23,7 +23,7 @@ export const Logo = ({
             />
          )}
          {!excludeText && (
-            <span className={cn("text-2xl font-semibold tracking-tight text-balance ", className)}>
+            <span className={cn("text-2xl font-semibold tracking-tight text-balance", className)}>
                {application.name}
             </span>
          )}
