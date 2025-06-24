@@ -38,6 +38,11 @@ export default async function RootLayout({
    const encryptedCookie = await cloakSSROnlySecret(cookie ?? "", "SECRET_CLIENT_COOKIE_VAR");
    return (
       <html lang="en" suppressHydrationWarning>
+         <script
+            src="https://cdn.peasy.so/peasy.js"
+            data-website-id={application.values.peasyWebsiteID}
+            async
+         ></script>
          <body
             className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)] antialiased`}
          >

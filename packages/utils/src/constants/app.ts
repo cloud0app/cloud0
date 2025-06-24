@@ -34,4 +34,7 @@ export const application = {
          link: "https://github.com/cloud0app/cloud0",
       },
    ],
+   values: {
+      peasyWebsiteID: "01jygktwyb2g77n546vhb50z24"
+   }
 };
