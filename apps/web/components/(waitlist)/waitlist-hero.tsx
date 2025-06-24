@@ -75,7 +75,8 @@ export function WaitlistHero() {
                   href="https://github.com/cloud0app/cloud0"
                   className="text-foreground underline"
                >
-                  GitHub {289}+
+                  GitHub
+                  {/* add stars if reaches 10 */}
                </Link>
             </motion.div>
          </AnimatedGroup>

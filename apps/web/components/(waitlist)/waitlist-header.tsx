@@ -32,26 +32,24 @@ const links = application.socials.map((link) => {
 export const WaitlistHeader = () => {
    return (
       <header>
-         <nav className="absolute top-0 left-0 z-20 mx-auto mt-2 w-full">
-            <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-               <div className="flex w-full justify-between">
-                  <Link
-                     href="/"
-                     aria-label="home"
-                     className="flex items-center space-x-2 outline-none"
-                  >
-                     <Logo />
-                  </Link>
-                  <div className="text-muted-foreground flex gap-3">
-                     {links.map((link) => (
-                        <Button asChild variant={"ghost"} size="icon" key={link.name}>
-                           <Link key={link.name} href={link.href}>
-                              {link.icon}
-                           </Link>
-                        </Button>
-                     ))}
-                     <ThemeToggle />
-                  </div>
+         <nav className="absolute top-0 left-0 z-20 mx-auto mt-2 px-4 sm:px-0 w-full">
+            <div className="flex w-full flex-wrap items-center justify-between">
+               <Link
+                  href="/"
+                  aria-label="home"
+                  className="flex items-center space-x-2 outline-none"
+               >
+                  <Logo />
+               </Link>
+               <div className="text-muted-foreground flex gap-3">
+                  {links.map((link) => (
+                     <Button asChild variant={"ghost"} size="icon" key={link.name}>
+                        <Link key={link.name} href={link.href}>
+                           {link.icon}
+                        </Link>
+                     </Button>
+                  ))}
+                  <ThemeToggle />
                </div>
             </div>
          </nav>
