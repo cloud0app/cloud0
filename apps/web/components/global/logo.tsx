@@ -1,5 +1,6 @@
 import { application, cn } from "@cloud0/utils";
 import Image from "next/image";
+import LogoMark from "@/assets/logo-mark.png";
 
 export const Logo = ({
    className,
@@ -12,17 +13,17 @@ export const Logo = ({
 }) => {
    return (
       <div className="flex items-center gap-1">
-         {/* {!excludeIcon && (
+         {!excludeIcon && (
             <Image
                alt="Logo"
                height={20}
                width={265}
-               src={"/images/brand/logo.png"}
-               className={cn("h-5 w-6 translate-y-[-0.125rem] dark:invert", className)}
+               src={LogoMark}
+               className={cn("h-[21px] w-8 translate-y-[-1px] dark:invert", className)}
             />
-         )} */}
+         )}
          {!excludeText && (
-            <span className={cn("text-xl font-semibold tracking-tight text-balance ", className)}>
+            <span className={cn("text-2xl font-semibold tracking-tight text-balance ", className)}>
                {application.name}
             </span>
          )}
