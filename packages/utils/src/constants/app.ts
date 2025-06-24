@@ -27,11 +27,11 @@ export const application = {
       },
       {
          name: "Discord",
-         link: "https://github.com/cloud0app/cloud0",
+         link: "https://discord.gg/6wRkt98F",
       },
       {
          name: "X",
-         link: "https://github.com/cloud0app/cloud0",
+         link: "https://x.com/cloud0dotapp?s=21",
       },
    ],
    values: {
