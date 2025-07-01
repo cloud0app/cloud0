@@ -12,14 +12,7 @@ export const sendEmail = async (opts: EmailOptions) => {
    const smtpConfigured = Boolean(process.env.SMTP_HOST && process.env.SMTP_PORT);
 
    if (smtpConfigured) {
-      const { to, from, subject, text, react } = opts;
-      return await sendViaNodeMailer({
-         to,
-         from,
-         subject,
-         text,
-         react,
-      });
+      return await sendViaNodeMailer(opts);
    }
 
    console.info(

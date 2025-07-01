@@ -8,7 +8,7 @@ export const sendEmailViaResend = async (opts: EmailOptions) => {
       return;
    }
 
-   const { to, from = "primary", bcc, replyTo, subject, text, react } = opts;
+   const { to, from = "primary", bcc, replyTo, subject, text, react, attachments } = opts;
 
    return await resend.emails.send({
       to,
@@ -17,14 +17,9 @@ export const sendEmailViaResend = async (opts: EmailOptions) => {
       subject,
       text,
       react,
+      attachments,
       ...(replyTo && {
          replyTo: replyTo,
       }),
    });
-};
-export const addToAudience = async ({ email, audience }: { email: string; audience: string }) => {
-   const createdAudience = await resend?.audiences.create({
-      name: audience,
-   });
-   return createdAudience?.data;
 };

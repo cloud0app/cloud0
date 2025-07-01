@@ -1,20 +1,10 @@
 import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
 import { ReactElement } from "react";
-import { CreateEmailOptions } from "resend";
+import { EmailOptions } from "src/types";
 import { FROM_EMAILS_VARIANT } from "./resend/constants";
 
-// Send email using NodeMailer (Recommended for local development)
-export const sendViaNodeMailer = async ({
-   to,
-   from = "primary",
-   subject,
-   text,
-   react,
-}: Pick<CreateEmailOptions, "subject" | "text" | "react"> & {
-   to: string;
-   from?: keyof typeof FROM_EMAILS_VARIANT;
-}) => {
+export const sendViaNodeMailer = async (opts: EmailOptions) => {
    const transporter = nodemailer.createTransport({
       // @ts-ignore (Fix this)
       host: process.env.SMTP_HOST,
@@ -29,6 +19,7 @@ export const sendViaNodeMailer = async ({
       },
    });
 
+   const { to, from = "primary", subject, text, react, attachments } = opts;
    const html = await render(react as ReactElement);
    return transporter.sendMail({
       from: FROM_EMAILS_VARIANT[from],
@@ -36,5 +27,6 @@ export const sendViaNodeMailer = async ({
       subject,
       text,
       html,
+      attachments,
    });
 };
